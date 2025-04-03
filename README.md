@@ -1,7 +1,7 @@
 
 # BRADWBK
 
-![standarts](assets/standarts.png)
+![standarts](assets/standards.png)
 
 a repository for backend development notes.
 
