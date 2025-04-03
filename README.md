@@ -1,7 +1,7 @@
 
 # BRADWBK
 
-![standarts](https://xkcd.com/927)
+![standarts](assets/standarts.png)
 
 a repository for backend development notes.
 
