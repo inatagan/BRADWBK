@@ -9,20 +9,28 @@ import br.edu.ifsp.user_api.util.UserDataSource;
 
 @Component
 public class UserRepository {
-    // Operações a fonte de dados 
+    // Operações a fonte de dados
 
     @Autowired
     UserDataSource uDataSource;
 
-    public List<User> getAllUsers(){
+    public List<User> getAllUsers() {
         return uDataSource.getDataSource();
     }
 
-    public User getUserById(int id){
+    public User getUserById(int id) {
         List<User> users = getAllUsers();
         return users.stream()
-                    .filter(t -> t.getId() == id)
-                    .findFirst()
-                    .orElse(null);
+                .filter(t -> t.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void patchUserById(User user) {
+        uDataSource.patch(user);
+    }
+
+    public void deleteUserById(User user) {
+        uDataSource.delete(user);
     }
 }

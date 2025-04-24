@@ -14,11 +14,19 @@ public class UserDataSource {
         datasource = new ArrayList<>();
     }
 
-    public List<User> getDataSource(){
+    public List<User> getDataSource() {
         return datasource;
     }
 
     public void add(User user) {
         datasource.add(user);
+    }
+
+    public void patch(User user) {
+        datasource.set(user.getId(), user);
+    }
+
+    public void delete(User user) {
+        datasource.remove(user);
     }
 }

@@ -13,11 +13,19 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public List<User> getUserList(){
+    public List<User> getUserList() {
         return userRepository.getAllUsers();
     }
 
-    public User getUserById(int id){
+    public User getUserById(int id) {
         return userRepository.getUserById(id);
+    }
+
+    public void patchUserById(User user) {
+        userRepository.patchUserById(user);
+    }
+
+    public void deleteUserById(User user) {
+        userRepository.deleteUserById(user);
     }
 }
